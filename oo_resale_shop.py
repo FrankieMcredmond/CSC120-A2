@@ -20,9 +20,9 @@ class ResaleShop:
         self.item_id_counter+= 1
         computer.item_id= self.item_id_counter
         self.inventory.append (computer)
-    def sell(self,):
-        self.inventory.remove ()
-        #print ("Item sold", self.item_id)
+    def sell(self, computer):
+        self.inventory.remove (computer)
+        print ("Item sold", computer.item_id)
 
 def main():
     computer = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2013, 1500,)
@@ -31,6 +31,8 @@ def main():
     print("Inventory b4 buying", len(myShop.inventory))
     myShop.buy(computer)
     print("Inventory after buying", len(myShop.inventory))
+    myShop.sell(computer)
+    print("Inventory after selling", len(myShop.inventory))
     
 if __name__ == "__main__":
     main()
