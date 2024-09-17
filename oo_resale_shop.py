@@ -20,8 +20,8 @@ class ResaleShop:
         self.item_id_counter+= 1
         computer.item_id= self.item_id_counter
         self.inventory.append (computer)
-    def sell(self, item_id ):
-        self.inventory.remove (item_id)
+    def sell(self,):
+        self.inventory.remove ()
         #print ("Item sold", self.item_id)
 
 def main():
