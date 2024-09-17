@@ -8,6 +8,7 @@ class Computer:
     operating_system: str
     year_made: int
     price: int
+    item_id:int
     #item_id: int
     # How will you set up your constructor?
     # Remember: in python, all constructors have the same name (__init__)
@@ -20,6 +21,7 @@ class Computer:
         self.operating_system= operating_system
         self.year_made= year_made
         self.price= price
+        self.item_id= 0
     def update_price(self, new_price):
         self.price=new_price
         print ("updated price", self.price)
