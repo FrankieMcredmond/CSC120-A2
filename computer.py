@@ -23,10 +23,10 @@ class Computer:
         self.item_id= 0
     def update_price(self, new_price): #takes a new price and replaces the old price
         self.price=new_price
-        print ("updated price", self.price)
+        print ("updated price: ", self.price)
     def update_OS(self, new_operatingsystem): #takes a new Operating system and replaces the old one
         self.operating_system=new_operatingsystem
-        print ("updated OS", self.operating_system)
+        print ("updated OS: ", self.operating_system)
 
         
     
