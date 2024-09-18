@@ -68,19 +68,29 @@ class ResaleShop:
 def main():
     print("\nWelcome to the Computer Store! :)") #Welcome Message
     new_os= "Mac OS monterey" #establishes most recent OS
-    computer = Computer("Mac Pro (Late 2008)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2008, 1500) #Creates computer
-    computer_2 = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Monterey", 2013, 1500) #creates  2nd Computer
+
+#Creates computers
+    computer = Computer("Mac Pro (Late 2008)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2008, 1500) 
+    computer_2 = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Monterey", 2013, 1500)
+
     myShop: ResaleShop= ResaleShop() #creates shop
-    print("Inventory before buying items: ", len(myShop.inventory), "\n") 
-    myShop.print_inventory() #error test
-    myShop.refurbish(computer,new_os) # error test
-    myShop.sell(computer) #error test
+    print("Inventory before buying items: ", len(myShop.inventory), "\n") #Inventory amount
+
+#error tests
+    myShop.print_inventory() 
+    myShop.refurbish(computer,new_os) 
+    myShop.sell(computer) 
+
+#buys computers
     myShop.buy(computer)
     myShop.buy(computer_2)
-    myShop.refurbish(computer,new_os)
-    myShop.print_inventory()
-    myShop.sell(computer)
-    print("Inventory after selling item:", len(myShop.inventory))
+
+    myShop.refurbish(computer,new_os) #Refurbishes computer (updates OS and price)
+    myShop.print_inventory() #print inventory
+    myShop.sell(computer) #sells computer
+    print("Inventory after selling item:", len(myShop.inventory), '\n') #Inventory amount
+
+    print("All done!")
     
 if __name__ == "__main__":
     main()
