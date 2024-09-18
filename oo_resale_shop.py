@@ -81,7 +81,7 @@ def main():
     myShop.refurbish(computer,new_os) 
     myShop.sell(computer)
 
-#buys computers
+#buys computers #also prints inventory amount at end
     myShop.buy(computer)
     myShop.buy(computer_2)
 
