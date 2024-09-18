@@ -39,10 +39,10 @@ class Computer:
 def main():
     
     # First, let's make a computer
-    computer = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2013, 1500,)
-    print (computer.description, computer.processor_type, computer.hard_drive_capacity, computer.memory, computer.operating_system, computer.year_made, computer.price, computer.item_id)
-    computer.update_price(150)
-    computer.update_OS("small sur")
+    computer = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2013, 1500,) #establishes computer
+    print (computer.description, computer.processor_type, computer.hard_drive_capacity, computer.memory, computer.operating_system, computer.year_made, computer.price, computer.item_id) #prints attributes
+    computer.update_price(150) #updates prices
+    computer.update_OS("small sur") #updates operating system
 # only call main if running directly
 if __name__ == "__main__":
     main()
