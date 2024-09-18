@@ -15,6 +15,7 @@ class ResaleShop:
     # What methods will you need?
         #buy computer
         #selling a computer
+        #print inventory
         #refurbishing a computer
     def buy(self, computer):
         self.item_id_counter+= 1
