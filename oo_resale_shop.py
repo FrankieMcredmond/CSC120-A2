@@ -79,7 +79,7 @@ def main():
 #error tests
     myShop.print_inventory() 
     myShop.refurbish(computer,new_os) 
-    myShop.sell(computer) 
+    myShop.sell(computer)
 
 #buys computers
     myShop.buy(computer)
