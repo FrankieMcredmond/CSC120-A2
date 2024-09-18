@@ -21,6 +21,7 @@ class ResaleShop:
         computer.item_id= self.item_id_counter
         self.inventory.append (computer)
         print ("Item bought: ", computer.description)
+        print("Inventory after buying item: ", len(self.inventory), "\n")
 
     def sell(self, computer):
         print("selling ", computer.description, "...")
@@ -28,16 +29,20 @@ class ResaleShop:
             self.inventory.remove (computer)
             print ("Item sold: ", computer.description)
         else:
-            print("sorrrrryyyyyy no computer")
+            print("sorrrrryyyyyy not in inventory \n")
 
     def print_inventory(self):
         print("printing inventory...")
-        for computer in self.inventory:
-            print (f'Item ID: {computer.item_id} : {computer.description, computer.processor_type, computer.hard_drive_capacity, computer.memory, computer.operating_system, computer.year_made, computer.price}\n')
-   
+        for i in self.inventory:
+            print (f'Item : {i.description} : {i.description, i.processor_type, i.hard_drive_capacity, i.memory, i.operating_system, i.year_made, i.price}')
+        if self.inventory==[]:
+            print ("Sorry, no items in inventory :(")
+        print ('\n')
+
+            
     def refurbish (self, computer, new_os):
+        print("Refurbishing",  computer.description, "...")
         if computer in self.inventory:
-            print("Refurbishing",  computer.description, "...")
             if computer.year_made<= 2000:
                 computer.update_price(0)
                 if computer.operating_system!=new_os:
@@ -56,17 +61,21 @@ class ResaleShop:
                     computer.update_OS(new_os)
             print("Done!\n")
         else:
-            print("Item not found in inventory :(")
+            print("Item not found in inventory :(\n")
             
 
 def main():
     print("\nWelcome to the Computer Store! :)")
     new_os= "Mac OS monterey"
-    computer = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2013, 1500,)
+    computer = Computer("Mac Pro (Late 2008)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Big Sur", 2008, 1500)
+    computer_2 = Computer("Mac Pro (Late 2013)", "3.5 GHc 6-Core Intel Xeon E5", 1024, 64, "macOS Monterey", 2013, 1500)
     myShop: ResaleShop= ResaleShop()
     print("Inventory before buying items: ", len(myShop.inventory), "\n")
+    myShop.print_inventory()
+    myShop.refurbish(computer,new_os)
+    myShop.sell(computer)
     myShop.buy(computer)
-    print("Inventory after buying item: ", len(myShop.inventory), "\n")
+    myShop.buy(computer_2)
     myShop.refurbish(computer,new_os)
     myShop.print_inventory()
     myShop.sell(computer)

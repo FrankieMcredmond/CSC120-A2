@@ -19,7 +19,7 @@ done 1 pt: Constructor for `Computer` class is present and sets attributes corre
 
 done 1 pt: All expected attributes for `ResaleShop` class are present
 
-____ 1 pt: All expected methods for `ResaleShop` class are present
+done 1 pt: All expected methods for `ResaleShop` class are present
 
 done 1 pt: Constructor for `ResaleShop` class is present and sets attributes correctly
 
@@ -31,11 +31,11 @@ done 1 pt: Can successfully remove a `Computer` from the inventory
 
 done 1 pt: Can successfully update the price/OS of a `Computer` contained in the inventory
 
-____ 1 pt: Program prints appropriate error messages
+done 1 pt: Program prints appropriate error messages
 
 ## General Items (10 pts):
 
-_____ 4 pts: Program executes fully & consistently without crashing (exception/freeze)
+done 4 pts: Program executes fully & consistently without crashing (exception/freeze)
 
 done 1 pt: Classes & class members all have header comments
 
